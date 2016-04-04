@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <img style="width: 100px;" src="https://aawards.blob.core.windows.net/aastorage/aa_logo.PNG" /><hr />
+    <div style="font-family:arial;font-size:100%">
+        Dear {UserName},<br>
+
+        <p>Greetings from alyaawards.com!</p>
+
+        <p>
+            We are pleased to inform you that following items in your Order <span style="color:#00648b">
+                {orderNumber}
+            </span> are ready to be shipped.
+        </p>
+
+        <p>Item(s) details:</p>
+        <table border="1" cellpadding="2" cellspacing="2" style="border-collapse:collapse;font-size:13px;border:1px solid #d2d9e7">
+            <tbody>
+                <tr style="background-color:#713E5A;color:#ffffff">
+                    <td> Product Details</td>
+                    <td> Ordered Quantity</td>
+                    <td> Price/unit ($.)</td>
+                    <td> Sub Total</td>
+                </tr>
+                {Orders}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Taxes</td>
+                    <td>+{taxes}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Shipping</td>
+                    <td>+{shipping}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Grand Total</td>
+                    <td>{grandTotal}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br />The shipment will be sent to: :
+        {ShippingAddress}
+        <br />
+        Regards,<br />
+        Alya Awards Team
+    </div>
+</body>
+</html>

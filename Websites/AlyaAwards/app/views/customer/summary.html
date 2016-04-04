@@ -1,0 +1,61 @@
+<div style="margin: 8% 10% 2% 10%;">
+    <div class="row product-container">
+        <h4 class="form-header">Order Summary</h4>
+        <hr style="margin: 0px"/>
+        <div ng-if="cart.products.length != 0">
+        <div class='row cart-row' style="padding: 0px 54px;">
+              <div class='col-md-2'>
+                <h4>Products</h4>
+              </div>
+              <div class='col-md-2'>
+                <h4>Qunatity</h4>
+              </div>
+              <div class='col-md-3'>
+                <h4>Product Details</h4>
+              </div>
+              <div class='col-md-3'>
+                <h4>Price</h4>
+              </div>
+            </div>
+            <hr />
+
+            <div ng-repeat="product in cart.products">
+              <div class='row cart-row' style="padding: 0px 30px;">
+                <div class='col-md-2' style='text-align:center'>
+                  <img style='width: 60%' class='cart-img-icon' src="{{product.Img}}"/>
+                </div>
+                <div class='col-md-2'>
+                  <p> {{product.quantity}} </p>
+                </div>
+                <div class='col-md-3'>
+                  <p> {{product.Name}} </p>
+                </div>
+                <div class='col-md-3'>
+                  <p>$ {{product.Price}} </p>
+                </div>
+              </div>
+              <hr />
+            </div>
+        
+            <div class='row cart-row'>
+                <div class='col-md-8'>
+                  <h4 class='pull-right'>Subtotal: {{cart.total}} </h4>
+                </div>
+                <div class='col-md-8'>
+                  <h4 class='pull-right'>Taxes: {{order.taxes}} </h4>
+                </div>
+                <div class='col-md-8'>
+                  <h4 class='pull-right'>Shipping: {{order.shipCharges}} </h4>
+                </div>
+                 <div class='col-md-8'>
+                  <h4 class='pull-right'>Total: {{order.orderTotal}} </h4>
+                </div>
+            </div>
+            <div class="row" style="margin-top:15px;">
+                <div class="col-md-3 pull-right" style="margin-bottom:10px;">
+                    <button class="btn btn-style" ng-click="conitnue('payment')">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

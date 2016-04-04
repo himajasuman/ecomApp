@@ -1,0 +1,64 @@
+<div style="margin: 8% 10% 2% 10%;">
+    <div class="row product-container">
+        <h4 class="form-header">Shipping</h4>
+        <hr style="margin: 0px"/>
+        <form novalidate class="form-horizontal" name="shipForm" style="padding: 10px 40px;" ng-submit="conitnue('summary')">
+            <div class="form-group" ng-class="{ 'has-error' : shipForm.fullName.$invalid && !shipForm.fullName.$pristine }">
+                <label>First Name</label>
+                <input type="text" name="fullName" class="form-control" ng-model="order.address.FullName" placeholder="First Name" required>
+                <p ng-show="shipForm.fullName.$invalid && !shipForm.fullName.$pristine" class="help-block">Full Name is required.</p>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : shipForm.add1.$invalid && !shipForm.add1.$pristine }">
+                <label>Addess Line 1</label>
+                <input type="text" name="add1" class="form-control" ng-model="order.address.Address_Line_1" placeholder="Address Line 1" required>
+                <p ng-show="shipForm.add1.$invalid && !shipForm.add1.$pristine" class="help-block">Address Line 1 is required.</p>
+            </div>
+            <div class="form-group">
+                <label>Addess Line 2</label>
+                <input type="text" name="add2" class="form-control" ng-model="order.address.Address_Line_2" placeholder="Address Line 2">
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : shipForm.city.$invalid && !shipForm.city.$pristine }">
+                <label>City</label>
+                <input type="text" name="city" class="form-control" ng-model="order.address.City" placeholder="City" required>
+                <p ng-show="shipForm.city.$invalid && !shipForm.city.$pristine" class="help-block">City is required.</p>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : shipForm.state.$invalid && !shipForm.state.$pristine }">
+                <label>State</label>
+                <input type="text" name="state" class="form-control" ng-model="order.address.State" placeholder="State" required>
+                <p ng-show="shipForm.state.$invalid && !shipForm.state.$pristine" class="help-block">State is required.</p>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : shipForm.cntry.$invalid && !shipForm.cntry.$pristine }">
+                <label>Country</label>
+                <input type="text" name="cntry" class="form-control" ng-model="order.address.Country" placeholder="Country" required>
+                <p ng-show="shipForm.cntry.$invalid && !shipForm.cntry.$pristine" class="help-block">Country is required.</p>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : shipForm.zip.$invalid && !shipForm.zip.$pristine }">
+                <label>Zipcode</label>
+                <input type="text" name="zip" class="form-control" ng-model="order.address.Zip" placeholder="Zip" required>
+                <p ng-show="shipForm.zip.$invalid && !shipForm.zip.$pristine" class="help-block">Zip is required.</p>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : shipForm.phn.$invalid && !shipForm.phn.$pristine }">
+                <label>Phone Number</label>
+                <input type="text" name="phn" class="form-control" ng-model="order.address.PhoneNumber" placeholder="Phone Number" required>
+                <p ng-show="shipForm.phn.$invalid && !shipForm.phn.$pristine" class="help-block">Phone Number is required.</p>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="radio" ng-model="shippingOption.value" value="7.97">
+                    Regular shipping 4 days to 1 week - 7.97
+                </label>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="radio" ng-model="shippingOption.value" value="9.49">
+                    Express shipping 2 to 3 days - 9.49
+                </label>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button class="btn btn-default" ng-disabled="shipForm.$invalid">Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

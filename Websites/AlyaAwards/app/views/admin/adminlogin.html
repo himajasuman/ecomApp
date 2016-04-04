@@ -1,0 +1,21 @@
+﻿<div class="form-widget" style="float:left">
+    <form name="admLogin" ng-submit="login()" novalidate>
+        <div class="form-group">
+            <p class="form-title">Login</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : admLogin.email.$invalid && !admLogin.email.$pristine }">
+            <label>Username</label>
+            <input type="email" name="email" class="form-control" ng-model="adm.UserId" placeholder="Username" required >
+            <p ng-show="admLogin.email.$invalid && !admLogin.email.$pristine" class="help-block">Enter a valid email.</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : admLogin.password.$invalid && !admLogin.password.$pristine }">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" ng-model="adm.Password" placeholder="Password" required>
+            <p ng-show="admLogin.password.$invalid && !admLogin.password.$pristine" class="help-block">Password is required.</p>
+        </div>
+        <button type="submit" class="btn btn-default" ng-disabled="admLogin.$invalid">Login</button>
+        <div class="form-group">
+            <a style="cursor:pointer;" href="#/admin/signup">Not yet signed up?Click here!</a>
+        </div>
+    </form>
+</div>

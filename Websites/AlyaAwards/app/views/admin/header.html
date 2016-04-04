@@ -1,0 +1,20 @@
+﻿<div id="menu">
+    <ul>
+        <li><a href="#/adminhome/products"><span>.01</span>Products</a></li>
+    </ul>
+    <div id="user-icon-span">
+        <div ng-if="user != undefined" class="dropdown">
+            <button class="btn btn-default dropdown-toggle user-dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="fa fa-user fa-lg"></i> User
+                <span class="caret">
+                </span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a ng-click="signOut()">Sign Out</a></li>
+            </ul>
+        </div>
+        <div ng-if="user == undefined">
+            <a id="loginLink" href="#/admin/login">Login</a>
+        </div>
+    </div>
+</div>

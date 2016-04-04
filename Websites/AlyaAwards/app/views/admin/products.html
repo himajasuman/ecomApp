@@ -1,0 +1,42 @@
+﻿<div style="margin: 2% 10%;">
+    <div>
+        <span style="font-size:24px">
+            Products
+        </span>
+        <span class="pull-right">
+            <button class="large-button btn-style btn" ng-click="addItem()">Add Item</button>
+        </span>
+    </div>
+    <div class="row product-container" id="productContainer">
+        <div ng-if="products.length == 0">
+            <div class='product-long row' style='text-align:center'>
+                <h4 style='font-weight:bold'>No Products to Display!</h4>
+            </div>
+        </div>
+
+        <div ng-if="products.length != 0">
+            <div class='product-long row' ng-repeat="prod in products track by $index">
+                <div class='col-md-2' text-align:center;height: 140px;>
+                    <span class='helper'></span><img style='width:80%' src='{{prod.Img}}' />
+                </div>
+                <div class='col-md-10'>
+                    <h4 style='font-weight:bold'>
+                        {{prod.Name}}
+                    </h4>
+                    <h4>
+                        $ {{prod.Price}}
+                    </h4>
+                    <h4>
+                        Quantity: {{prod.Stock}}
+                    </h4>
+                    <span>
+                        <button ng-click='delItem(prod.Id)'>Delete Item</button>
+                    </span>
+                    <span>
+                        <button ng-click='editItem(prod.Id)'>Update Item</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

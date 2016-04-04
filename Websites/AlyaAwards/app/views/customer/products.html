@@ -1,0 +1,34 @@
+﻿<div style="margin: 2% 10%;">
+	<div class="row">
+	    <div class="col-md-6">
+	        <span style="font-size:24px">
+	            Products
+	        </span>    
+	    </div>
+	    <div class="col-md-6" style="padding:0px">
+	        <div class="input-group">
+	            <input id="SearchInput" type="text" class="form-control" placeholder="Search for..."  ng-model="query"/>
+	            <span class="input-group-addon btn-style"><i class="fa fa-search fa-fw"></i></span>
+	        </div>
+	  </div>
+	</div>
+	<div class="row product-container" id="productContainer">
+	   <div ng-if='products.length == 0' class='product-long row' style='text-align:center'>
+	       <h4 style='font-weight:bold'>No Products to Display!</h4>
+	   </div>
+
+	   <a ng-repeat="prod in products | filter:query" class='bar-menu' ui-sref='home.productDetail({prodId: prod.Id})'>
+	        <div class='col-md-3 products'>
+	                <div class='products-div'>
+	                    <img style='height:200px' src='{{prod.Img}}' >
+	                </div>
+	                <div class='products-caption row'>
+	                    <div class='col-md-8'>
+	                            <p style='font-size: 12px;'>  {{prod.Name}} </p>
+	                            <b>$ {{prod.Price}} </b>
+	                    </div>
+	                </div>
+	        </div>
+	   </a>
+	</div>
+</div>

@@ -1,0 +1,272 @@
+﻿.form-widget{
+    width: 350px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    background: white;
+}
+.form-title{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+body{
+       margin: 0px;
+       font-family: 'Lato', sans-serif;
+        background: url(http://1.bp.blogspot.com/_7rAPcLs2lIE/SaMPphHZ87I/AAAAAAAACBE/zG6ReRsjgk0/s400/Cupcakes+by+The+Dozen+3.jpg);
+    }
+
+#footer{
+    height: 150px;
+    background-color: #353535;
+    margin-top:10px;
+}
+
+.page-wrap{
+    min-height: 600px;
+}
+
+/*header*/
+.user-dropdown, .user-dropdown:hover, .user-dropdown:active, .user-dropdown:focus{
+    border: 0px;
+    margin-top: -6px;
+    background-color:transparent !important;
+}
+
+.logged-out{
+    height: 250px;
+    background: url(../Images/fstoreboutique-header.png);
+}
+.logged-in{
+    height: 180px;
+    background:url(../Images/logged-in.png);
+}
+#logo{
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+}
+#cart-span{
+    width: 20px;
+    height: 20px;
+    margin-top: -20px;
+    margin-left: 42px;
+    border-radius: 5px;
+    background-color: #A79F92;
+    position: absolute;
+    font-size: 12px !important;
+    text-align: center;
+    color: #5D0A0A !important;
+}
+
+#cart-container{
+    border: 1px solid #DACDCD;
+    margin-top: 15px;
+    background-color: white;
+}
+
+#dropdownMenu1{
+    color: beige !important;
+}
+/*header end*/
+   #content{
+        padding: 25px;
+        width: 340px;
+        margin-top: 20px;
+        border: 1px solid #563648;
+   }
+#form_label{
+    font-size: 24px;
+}
+.form-box{
+    margin: 0px auto;
+}
+.form-header{
+     padding: 10px 70px;
+}
+.row{
+    margin:0px;
+}
+.product-container{
+    border: 1px solid #DACDCD;
+    margin-top: 15px;
+    background-color:white;
+}
+
+.product-long{
+    border-bottom:1px solid gray;
+    padding: 5px;
+}
+
+
+.large-button{
+    width: 160px;
+    border: 0px;
+    height: 33px;
+}
+.btn-style, .input-group-addon{
+    background-color: #713E5A;
+    color: beige;
+    font-weight: bold;
+}
+#nav-ul{
+float: right;
+margin: 0px;
+}
+
+.nav-li{
+list-style: none;
+float: left;
+padding: 50px 25px;
+}
+
+#user-icon-span{
+    float: right;
+    width: 55px;
+    margin: 35px;
+}
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* Products start*/
+.products-div{
+text-align: center;
+width: 90%;
+padding: 5%;
+margin-left: 5%;
+border: 1px solid #F1F1DB;
+}
+
+.products-div img{
+max-width: 100%;
+min-width: 80%;
+}
+.products-caption{
+width:90%;
+color: #757373;
+margin-left:5%;
+}
+
+.bar-menu{
+color: white !important;
+}
+
+.products {
+padding-top: 1%;
+padding-bottom: 1%;
+cursor:pointer;
+}
+
+.products p{
+margin:10px 0 0 0;
+}
+
+#product-detail{
+padding-top:4%;
+}
+
+#product-detail .col-md-5{
+text-align: center;
+padding-bottom: 40px;
+}
+
+#product-detail img{
+padding: 5%;
+border: 1px solid #E4E4E4;
+height: 290px;
+width: 100%;
+}
+
+/* Products end*/
+
+
+/*order*/
+
+/*#order-breadcrumbs {
+margin-top: 250px;
+margin-left: 300px;
+}*/
+#breadcrumbs-div{
+    margin-left: 11%;
+    margin-top: 2%;
+    padding: 0px;
+}
+
+.breadcrumbs { 
+    list-style: none; 
+    margin-bottom: 0px;
+    overflow: hidden; 
+    padding: 0px;
+    font: 18px Helvetica, Arial, Sans-Serif;
+}
+.breadcrumbs li { 
+    float: left; 
+}
+.breadcrumbs li a {
+    color: white;
+    text-decoration: none; 
+    padding: 10px 22px 10px 90px;
+    background: brown;                   /* fallback color */
+    background: hsl(327, 29%, 29%); 
+    font-size: 12px;
+    position: relative; 
+    display: block;
+    float: left;
+}
+.breadcrumbs li a:after { 
+    content: " "; 
+    display: block; 
+    width: 0; 
+    height: 0;
+    border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid hsl(327, 29%, 29%);
+    position: absolute;
+    top: 50%;
+    margin-top: -50px; 
+    left: 100%;
+    z-index: 2; 
+}
+.breadcrumbs li a:before { 
+    content: " "; 
+    display: block; 
+    width: 0; 
+    height: 0;
+    border-top: 50px solid transparent;       
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid white;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px; 
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1; 
+}
+
+/*.breadcrumbs li:nth-child(2) a       { background:        hsla(34,85%,45%,1); }
+.breadcrumbs li:nth-child(2) a:after { border-left-color: hsla(34,85%,45%,1); }
+.breadcrumbs li:nth-child(3) a       { background:        hsla(34,85%,55%,1); }
+.breadcrumbs li:nth-child(3) a:after { border-left-color: hsla(34,85%,55%,1); }
+.breadcrumbs li:nth-child(4) a       { background:        hsla(34,85%,65%,1); }
+.breadcrumbs li:nth-child(4) a:after { border-left-color: hsla(34,85%,65%,1); }*/
+
+.breadcrumbs li a:hover { background:hsl(327, 53%, 17%); color: white;}
+.breadcrumbs li a:hover:after { border-left-color: hsl(327, 53%, 17%) !important; }
+
+li.breadcrumb-active a { background: hsl(327, 53%, 17%); color: white !important; }
+li.breadcrumb-active a:after { border-left-color: hsl(327, 53%, 17%) !important; }
+
+li.breadcrumb-disabled a { background: hsl(327, 21%, 54%); color: white !important; }
+li.breadcrumb-disabled a:after { border-left-color: hsl(327, 21%, 54%) !important; }
+li.breadcrumb-disabled a:hover { background: hsl(327, 21%, 54%); color: white;}
+li.breadcrumb-disabled a:hover:after { border-left-color: hsl(327, 21%, 54%) !important; }
+
+
+

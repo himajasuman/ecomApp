@@ -1,0 +1,58 @@
+﻿<div style="margin: 2% 10%;">
+    <div class="row">
+        <div class="col-lg-6">
+            <span style="font-size:24px">
+                Products
+            </span>    
+        </div>
+    </div>
+    <div id="product-detail" class="row product-container">
+        <div class="col-md-5">
+            <img src="{{item.Img}}" id="Itm_img"/>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                     <h4 id="Itm_name">{{item.Name}}</h4>
+                </div>
+            </div>
+             <div class="row">
+                 <div class="col-md-2">
+                    <p>Price:</p>
+                </div>
+                <div class="col-md-10">
+                    <h5 id="Itm_price">{{item.Price}}</h5>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <p>Stock Details:</p>
+                </div>
+                <div class="col-md-9">
+                    <span id="itm_stock">{{item.Stock}}</span>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Product Description:</p>
+                </div>
+                <div class="col-md-8">
+                    <p id="itm_desc">{{item.Description}}</p>
+                 </div>
+            </div>
+             <div class="row">
+                <div class="col-md-4">
+                    <p>Quantity:</p>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" id="item_quantity" ng-model="prodToCart.quantity"/>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                     <button class="btn btn-default" ng-click="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿<div style="margin: 2% 10%;">
+    <div class="row product-container" style="padding:30px">
+        <form name="addProductForm" class="form-horizontal" ng-submit="addProduct()" novalidate>
+            <div class="form-group" ng-class="{ 'has-error' : addProductForm.itmName.$invalid && !addProductForm.itmName.$pristine }">
+                <label for="itmName" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" name="itmName" ng-model="product.Name" class="form-control" placeholder="Item Name" required/>
+                    <p ng-show="addProductForm.itmName.$invalid && !addProductForm.itmName.$pristine" class="help-block">Item Name is required.</p>
+                 </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : addProductForm.itmCat.$invalid && !addProductForm.itmCat.$pristine }">
+                <label for="cat" class="col-sm-2 control-label">Category</label>
+                <div class="col-sm-10">
+                    <input type="text" name="itmCat" ng-model="product.Category" class="form-control" placeholder="Item Category" required/>
+                    <p ng-show="addProductForm.itmCat.$invalid && !addProductForm.itmCat.$pristine" class="help-block">Item Category is required.</p>
+                 </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : editProductForm.itmNoItms.$invalid && !editProductForm.itmNoItms.$pristine }">
+                <label for="noOfItems" class="col-sm-2 control-label">No. of Items</label>
+                <div class="col-sm-10">
+                    <input type="text" name="itmNoItms" ng-model="product.Stock" class="form-control" id="noOfItems" placeholder="Stock" ng-pattern="/^\d+$/" required />
+                    <p ng-show="editProductForm.itmNoItms.$invalid && !editProductForm.itmNoItms.$pristine" class="help-block"> Stock Number is required; Only numbers are allowed.</p>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : editProductForm.itmPrice.$invalid && !editProductForm.itmPrice.$pristine}">
+                <label for="price" class="col-sm-2 control-label">Price</label>
+                <div class="col-sm-10">
+                    <input type="text" name="itmPrice" ng-model="product.Price" class="form-control" id="price" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" placeholder="Price" required />
+                    <p ng-show="editProductForm.itmPrice.$invalid && !editProductForm.itmPrice.$pristine" class="help-block">Item Price is required; Enter a valid price.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="img" class="col-sm-2 control-label">Upload Image</label>
+                <div class="col-sm-10">
+                    <input type="file" file-model="imageFile"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="desc" class="col-sm-2 control-label">Description</label>
+                <div class="col-sm-10">
+                    <input TextMode="multiline" Columns="50" Rows="5" class="form-control" ng-model="product.Description" id="desc"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button  type="submit" class="btn btn-default" ng-disabled="addProductForm.$invalid">Add Item</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

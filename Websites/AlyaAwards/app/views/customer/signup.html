@@ -1,0 +1,36 @@
+﻿<div class="form-widget" style="width:500px">
+    <form name="custForm" ng-submit="SignUp()" novalidate>
+        <div class="form-group">
+            <p class="form-title">SignUp</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : custForm.email.$invalid && !custForm.email.$pristine }">
+            <label>Username</label>
+            <input type="email" name="email" class="form-control" ng-model="customer.UserId" placeholder="Username" required>
+            <p ng-show="custForm.email.$invalid && !custForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : custForm.password.$invalid && !custForm.password.$pristine }">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" ng-model="customer.Password" ng-minlength="5" placeholder="Password" required/>
+            <p ng-show="custForm.password.$error.minlength" class="help-block">Password is too short.</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : custForm.firstName.$invalid && !custForm.firstName.$pristine }">
+            <label>First Name</label>
+            <input type="text" name="firstName" class="form-control" ng-model="customer.FirstName" placeholder="First Name" required>
+            <p ng-show="custForm.firstName.$invalid && !custForm.firstName.$pristine" class="help-block">First Name is required.</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : custForm.lastName.$invalid && !custForm.lastName.$pristine }">
+            <label>Last Name</label>
+            <input type="text" name="lastName" class="form-control" ng-model="customer.LastName" placeholder="Last Name" required>
+            <p ng-show="custForm.lastName.$invalid && !custForm.lastName.$pristine" class="help-block">Last Name is required.</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : custForm.phonenum.$invalid && !custForm.phonenum.$pristine }">
+            <label>Phone Number</label>
+            <input type="text" name="phonenum" class="form-control" ng-model="customer.PhoneNumber" ng-minlength="10" placeholder="Phone Number" required>
+            <p ng-show="custForm.phonenum.$error.minlength" class="help-block">Enter valid phone number.</p>
+        </div>
+        <button type="submit" class="btn btn-default" ng-disabled="custForm.$invalid">Signup</button>
+        <div class="form-group">
+            <a style="cursor:pointer;" href="#/customerin/login">Click here to Login!</a>
+        </div>
+    </form>
+</div>

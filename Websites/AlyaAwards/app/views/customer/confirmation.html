@@ -1,0 +1,72 @@
+<div style="margin: 8% 10% 2% 10%;">
+    <div class="row product-container">
+        <h4 class="form-header">Confirmation</h4>
+        <hr style="margin: 0px"/>
+        <div class="form-horizontal" style="padding: 10px 75px;">
+            <div class="form-group">
+                <h4 class="col-sm-12">Your order number is {{orderNo}}</h4>
+                <p class="col-sm-12">Order Amount is charged from {{cardLastNumbers}}</p>
+                <p>Item(s) details:</p>
+                <table border="1" cellpadding="2" cellspacing="2" style="border-collapse:collapse;font-size:13px;border:1px solid #d2d9e7">
+                    <tbody>
+                        <tr style="background-color:#713E5A;color:#ffffff">
+                            <td> Product Details</td>
+                            <td> Ordered Quantity</td>
+                            <td> Price/unit ($.)</td>
+                            <td> Sub Total</td>
+                        </tr>
+                        <tr ng-repeat="itm in order.items">
+                            <td>
+                                {{itm.Name}}
+                            </td>
+                            <td>
+                                {{itm.quantity}}
+                            </td>
+                            <td>
+                                {{itm.Price}}
+                            </td>
+                            <td>
+                                {{itm.quantity * itm.Price}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Taxes</td>
+                            <td>+{{order.taxes}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Shipping</td>
+                            <td>+{{order.shipCharges}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Grand Total</td>
+                            <td>{{order.orderTotal}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br />The shipment will be sent to: :
+                <address class="col-sm-12" style="font-size: 12px;">
+                    <br> {{order.address.FullName}}
+                    <br> {{order.address.Address_Line_1}}, {{order.address.Address_Line_2}}
+                    <br> {{order.address.City}}
+                    <br> {{order.address.State}} - {{order.address.Zip}},
+                    <br> {{order.address.Country}}
+                    <br> Phone: {{order.address.PhoneNumber}}
+                </address>
+                <br />
+                <p class="col-sm-12">by {{order.deliveryDate}}.</p>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-11">
+                    <button class="large-button" ng-click="toHome()" >Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿<div class="row">
+	<div class="col-md-10" id="breadcrumbs-div">
+		<ul class="breadcrumbs">
+			<li ui-sref-active="breadcrumb-active"><a ui-sref="customer.checkout.shipping" href>Shipping</a></li>
+			<li ui-sref-active="breadcrumb-active" ng-class="{'breadcrumb-disabled': bc.summary}"><a ui-sref="customer.checkout.summary" href>Order Summary</a></li>
+			<li ui-sref-active="breadcrumb-active" ng-class="{'breadcrumb-disabled': bc.payment}"><a ui-sref="customer.checkout.payment" href>Payment</a></li>
+			<li ui-sref-active="breadcrumb-active" ng-class="{'breadcrumb-disabled': bc.confirmation}"><a ui-sref="customer.checkout.confirmation" href>Confirmation</a></li>
+		</ul>
+	</div>
+	<div ui-view="orderContainer">
+	</div>
+</div>

@@ -1,0 +1,2 @@
+C:\Users\himaja\Documents\Visual Studio 2015\Projects\EcomApp_1\EcomApp.Azure\bin\Release\ServiceConfiguration.cscfg
+C:\Users\himaja\Documents\Visual Studio 2015\Projects\EcomApp_1\EcomApp.Azure\bin\Release\ServiceDefinition.csdef

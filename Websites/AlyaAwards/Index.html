@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="app/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app/bower_components/angular/angular.js"></script>
+    <script src="app/bower_components/angular-ui-router/angular-ui-router.min.js"></script>
+    <script src="app/bower_components/underscore/underscore-min.js"></script>
+    <script src="app/bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="app/bower_components/angular-azure-blob-upload/azure-blob-upload.js"></script>
+    <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app/styles/styles.css" />
+    <link rel="stylesheet" href="app/styles/default_style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body ng-app="EcomApp">
+    <script src="app/scripts/app.js"></script>
+    <script src="app/scripts/dataFactory.js"></script>
+    <script src="app/scripts/cartService.js"></script>
+    <script src="app/scripts/directives/fileModel.js"></script>
+    <script src="app/scripts/controllers/addProductCtrl.js"></script>
+    <script src="app/scripts/controllers/adminLoginCtrl.js"></script>
+    <script src="app/scripts/controllers/adminProductsCtrl.js"></script>
+    <script src="app/scripts/controllers/adminSignupCtrl.js"></script>
+    <script src="app/scripts/controllers/cartCtrl.js"></script>
+    <script src="app/scripts/controllers/checkoutCtrl.js"></script>
+    <script src="app/scripts/controllers/editProductCtrl.js"></script>
+    <script src="app/scripts/controllers/headerCtrl.js"></script>
+    <script src="app/scripts/controllers/loginCtrl.js"></script>
+    <script src="app/scripts/controllers/productDetailCtrl.js"></script>
+    <script src="app/scripts/controllers/productsCtrl.js"></script>
+    <script src="app/scripts/controllers/signupCtrl.js"></script>
+    <div id="wrapper">
+        <div ui-view="header"></div>
+        <div id="header_bar">
+            <div id="header">
+                <div class="right"></div>
+                <h1><a> <img id="Image1" src="app/images/logo.png"  /> <span>Alya's Awards</span> </a></h1>
+            </div>
+        </div>
+        <div class="page-wrap" ui-view></div>
+        <footer ui-view="footer"></footer>
+    </div>
+</body>
+</html>

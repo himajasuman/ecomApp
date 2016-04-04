@@ -1,0 +1,14 @@
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+*.jpg
+*.gif
+*.png
+*.svg
+*.ico
+
+Websites/AlyaAwards/app/bower_components/*

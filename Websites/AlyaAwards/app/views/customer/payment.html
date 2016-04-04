@@ -1,0 +1,43 @@
+<div style="margin: 8% 10% 2% 10%;">
+    <div class="row product-container">
+        <h4 class="form-header">Payment</h4>
+        <hr style="margin: 0px"/>
+        <form novalidate class="form-horizontal" name="payForm" style="padding: 10px 40px;" ng-submit="pay()">
+            <div class="form-group" ng-class="{ 'has-error' : payForm.name.$invalid && !payForm.name.$pristine }">
+                <label class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" name="name"  ng-model="paymentInfo.Name" class="form-control" placeholder="Name" required/>
+                    <p ng-show="payForm.name.$invalid && !payForm.name.$pristine" class="help-block">Name is required.</p>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : payForm.cardno.$invalid && !payForm.cardno.$pristine }">
+                <label class="col-sm-2 control-label">Card Number</label>
+                <div class="col-sm-10">
+                    <input type="text" name="cardno"  ng-model="paymentInfo.cardNumber" class="form-control" placeholder="Name" required ng-maxlength="16" ng-minlength="16"/>
+                    <p ng-show="payForm.cardno.$invalid && !payForm.cardno.$pristine" class="help-block">Card Number is required; Enter valid Card Number!</p>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : payForm.expdate.$invalid && !payForm.expdate.$pristine }">
+                <label class="col-sm-2 control-label">Expiration Date</label>
+                <div class="col-sm-10">
+                    <input type="text" name="expdate" ng-model="paymentInfo.ExpDate" class="form-control"  ng-pattern='/^(0?[1-9]|1[012])\/(199\d)|([2-9]\d{3})$/' placeholder="MM/YYYY" required />
+                    <p ng-show="payForm.expdate.$invalid && !payForm.expdate.$pristine" class="help-block">Expiration Date is required.</p>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : payForm.cvv.$invalid && !payForm.cvv.$pristine }">
+                <label class="col-sm-2 control-label">Security Code</label>
+                <div class="col-sm-10">
+                    <input type="text" name="cvv" ng-model="paymentInfo.cvv" class="form-control" placeholder="Name" required ng-pattern="/^\d+$/"  ng-maxlength="3" ng-minlength="3" />
+                    <p ng-show="payForm.cvv.$invalid && !payForm.cvv.$pristine" class="help-block">CVV is required.</p>
+                    <p ng-show="payForm.cvv.$error.pattern" class="help-block">CVV should be a number.</p>
+                    <p ng-show="payForm.cvv.$error.minlength || payForm.cvv.$error.maxlength" class="help-block">Enter a valid cvv.</p>
+                 </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button class="btn btn-default" ng-disabled="payForm.$invalid">Pay</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
